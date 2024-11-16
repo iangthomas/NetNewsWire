@@ -100,7 +100,7 @@ extension LocalAccountRefresher: DownloadSessionDelegate {
 				return
 			}
 			
-			account.update(feed, with: parsedFeed) { result in
+			account.update(feed, with: ContentControl.GetNewFocusedFeed(allContentFeed: parsedFeed)) { result in
 				if case .success(let articleChanges) = result {
 					if let httpResponse = response as? HTTPURLResponse {
 						feed.conditionalGetInfo = HTTPConditionalGetInfo(urlResponse: httpResponse)

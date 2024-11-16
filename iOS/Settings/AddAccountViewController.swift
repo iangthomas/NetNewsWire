@@ -134,7 +134,9 @@ class AddAccountViewController: UITableViewController, AddAccountDismissDelegate
 		case AddAccountSections.icloud.rawValue:
 			cell.comboNameLabel?.text = AddAccountSections.icloud.sectionContent[indexPath.row].localizedAccountName()
 			cell.comboImage?.image = AppAssets.image(for: AddAccountSections.icloud.sectionContent[indexPath.row])
-			if AppDefaults.shared.isDeveloperBuild || AccountManager.shared.accounts.contains(where: { $0.type == .cloudKit }) {
+//#warning("why was this disabled for dev builds?")
+// if AppDefaults.shared.isDeveloperBuild || AccountManager.shared.accounts.contains(where: { $0.type == .cloudKit }) {
+			if false || AccountManager.shared.accounts.contains(where: { $0.type == .cloudKit }) {
 				cell.isUserInteractionEnabled = false
 				cell.comboNameLabel?.isEnabled = false
 			}
