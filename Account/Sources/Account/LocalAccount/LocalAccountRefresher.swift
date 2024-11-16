@@ -70,7 +70,7 @@ extension LocalAccountRefresher: DownloadSessionDelegate {
 	
 	func downloadSession(_ downloadSession: DownloadSession, downloadDidCompleteForRepresentedObject representedObject: AnyObject, response: URLResponse?, data: Data, error: NSError?, completion: @escaping () -> Void) {
 		let feed = representedObject as! WebFeed
-		
+#warning("this is called when refrshing")
 		guard !data.isEmpty, !isSuspended else {
 			completion()
 			delegate?.localAccountRefresher(self, requestCompletedFor: feed)
@@ -84,12 +84,13 @@ extension LocalAccountRefresher: DownloadSessionDelegate {
 			return
 		}
 
+#warning("data is already up to date, re add this after testing")
 		let dataHash = data.md5String
-		if dataHash == feed.contentHash {
-			completion()
-			delegate?.localAccountRefresher(self, requestCompletedFor: feed)
-			return
-		}
+//		if dataHash == feed.contentHash {
+//			completion()
+//			delegate?.localAccountRefresher(self, requestCompletedFor: feed)
+//			return
+//		}
 
 		let parserData = ParserData(url: feed.url, data: data)
 		FeedParser.parse(parserData) { (parsedFeed, error) in
@@ -99,8 +100,8 @@ extension LocalAccountRefresher: DownloadSessionDelegate {
 				self.delegate?.localAccountRefresher(self, requestCompletedFor: feed)
 				return
 			}
-			
-			account.update(feed, with: parsedFeed) { result in
+						
+			account.update(feed, with: ContentControl.GetNewFocusedFeed(allContentFeed: parsedFeed)) { result in
 				if case .success(let articleChanges) = result {
 					if let httpResponse = response as? HTTPURLResponse {
 						feed.conditionalGetInfo = HTTPConditionalGetInfo(urlResponse: httpResponse)

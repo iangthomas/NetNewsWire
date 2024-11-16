@@ -693,6 +693,7 @@ private extension ArticlesTable {
         return articlesCount
     }
     
+	/// This happens when displaying the page
 	private func fetchArticlesAsync(_ fetchMethod: @escaping ArticlesFetchMethod, _ completion: @escaping ArticleSetResultBlock) {
 		queue.runInDatabase { databaseResult in
 
@@ -713,7 +714,7 @@ private extension ArticlesTable {
 	func articlesWithResultSet(_ resultSet: FMResultSet, _ database: FMDatabase) -> Set<Article> {
 		var cachedArticles = Set<Article>()
 		var fetchedArticles = Set<Article>()
-
+#warning("this is called upon open")
 		while resultSet.next() {
 
 			guard let articleID = resultSet.string(forColumn: DatabaseKey.articleID) else {

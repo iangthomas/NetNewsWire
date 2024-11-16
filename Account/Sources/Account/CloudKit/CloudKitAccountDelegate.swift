@@ -631,7 +631,9 @@ private extension CloudKitAccountDelegate {
 					self.refreshProgress.completeTask()
 
 					if let parsedFeed = parsedFeed {
-						account.update(feed, with: parsedFeed) { result in
+						
+#warning("here rerherh")
+						account.update(feed, with: ContentControl.GetNewFocusedFeed(allContentFeed: parsedFeed)) { result in
 							switch result {
 							case .success:
 								

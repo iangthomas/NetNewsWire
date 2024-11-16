@@ -264,8 +264,7 @@ private extension LocalAccountDelegate {
 						let feed = account.createWebFeed(with: nil, url: url.absoluteString, webFeedID: url.absoluteString, homePageURL: nil)
 						feed.editedName = editedName
 						container.addWebFeed(feed)
-
-						account.update(feed, with: parsedFeed, {_ in
+						account.update(feed, with: ContentControl.GetNewFocusedFeed(allContentFeed: parsedFeed), {_ in
 							BatchUpdate.shared.end()
 							completion(.success(feed))
 						})
