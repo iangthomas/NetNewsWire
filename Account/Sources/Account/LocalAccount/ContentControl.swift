@@ -37,8 +37,8 @@ struct ContentControl {
 		}
 	}
 	
-	private static let notLookingFor = ["bezos", "elon", "musk", "election", "inauguration", "trump", "rogan"]
-	// other ideas: senator, politics, sponsor
+	private static let notLookingFor = ["bezos", "elon", "musk", "election", "inauguration", "trump", "rogan", "democrat", "republican"]
+	// other ideas: senator, politics, sponsor, conspiracy
 	
 	static func IncludeThisItem(item: ParsedItem) -> Bool {
 		if let title = item.title {
