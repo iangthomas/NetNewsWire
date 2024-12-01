@@ -1,7 +1,7 @@
 CODE_SIGN_IDENTITY = iPhone Developer
-DEVELOPMENT_TEAM = M8L2WTLA8W
+DEVELOPMENT_TEAM = 79DFX3SWE8
 CODE_SIGN_STYLE = Automatic
-ORGANIZATION_IDENTIFIER = com.ranchero
+ORGANIZATION_IDENTIFIER = com.kkitcreations
 PROVISIONING_PROFILE_SPECIFIER =
 
 // See the notes in NetNewsWire_target.xcconfig on why the

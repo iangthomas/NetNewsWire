@@ -2896,7 +2896,6 @@
 				65ED4070235DEF6C0081F399 /* Embed Frameworks */,
 				65ED407B235DEF6C0081F399 /* Embed App Extensions */,
 				652832CF2683DD0400E6F37C /* Run Script: Delete Unnecessary Frameworks For Share Extension */,
-				65ED407D235DEF6C0081F399 /* Run Script: Verify No Build Settings */,
 			);
 			buildRules = (
 			);
@@ -2948,7 +2947,6 @@
 				840D617A2029031C009BC708 /* Resources */,
 				51C451DF2264C7F200C03939 /* Embed Frameworks */,
 				513C5CF1232571C2003D4054 /* Embed App Extensions */,
-				515D50802326D02600EE1167 /* Run Script: Verify No Build Settings */,
 				5170CA5A279E468000702605 /* Delete Unnecessary Frameworks */,
 			);
 			buildRules = (
@@ -2988,7 +2986,6 @@
 				84B06F681ED37B9000F0B54B /* Embed Frameworks */,
 				6581C75720CED60100F4AD34 /* Embed App Extensions */,
 				7180F95C265B67B800189094 /* Run Script: Delete Unnecessary Frameworks For Share Extension */,
-				D519E77022EE5B4100923F27 /* Run Script: Verify No Build Settings */,
 				8423E3E3220158E700C3795B /* Run Script: Code Sign Sparkle */,
 			);
 			buildRules = (
@@ -3060,13 +3057,11 @@
 					};
 					51314636235A7BBE00387FDC = {
 						CreatedOnToolsVersion = 11.2;
-						DevelopmentTeam = SHJK2V3AJG;
 						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 					};
 					513C5CE5232571C2003D4054 = {
 						CreatedOnToolsVersion = 11.0;
-						DevelopmentTeam = SHJK2V3AJG;
 						ProvisioningStyle = Automatic;
 					};
 					518B2ED12351B3DD00400001 = {
@@ -3401,24 +3396,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if ! command -v swiftgen &> /dev/null\nthen\n    echo \"swiftgen could not be found\"\n    exit\nfi\n\nswiftgen run strings -t structured-swift5 \"$PROJECT_DIR/Widget/Resources/en.lproj/Localizable.strings\" \"$PROJECT_DIR/Widget/Resources/Localizable.stringsdict\" --output \"$PROJECT_DIR/Widget/Resources/Localized.swift\";\n";
 		};
-		515D50802326D02600EE1167 /* Run Script: Verify No Build Settings */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script: Verify No Build Settings";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "xcrun -sdk macosx swiftc -target x86_64-macosx10.11  buildscripts/VerifyNoBS.swift -o $CONFIGURATION_TEMP_DIR/VerifyNoBS\n$CONFIGURATION_TEMP_DIR/VerifyNoBS ${PROJECT_NAME}.xcodeproj/project.pbxproj\n\n\nif [ $? -ne 0 ]\nthen\n   echo \"error: Build Setting were found in the project.pbxproj file.  Most likely you didn't intend to change this file and should revert it.\"\n   exit 1\nfi\n";
-		};
 		5170CA5A279E468000702605 /* Delete Unnecessary Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -3488,24 +3465,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# See https://blog.curtisherbert.com/automated-build-numbers/\n\n# WARNING: If automated build numbers are restored then take \n# care to ensure any app extensions are versioned the same as the app.\n# ask Daniel (jalkut@red-sweater.com) if in doubt about this. \n#git=`sh /etc/profile; which git`\n#branch_name=`$git symbolic-ref HEAD | sed -e 's,.*/\\\\(.*\\\\),\\\\1,'`\n#git_count=`$git rev-list $branch_name |wc -l | sed 's/^ *//;s/ *$//'`\n#simple_branch_name=`$git rev-parse --abbrev-ref HEAD`\n\n#build_number=\"$git_count\"\n#if [ $CONFIGURATION != \"Release\" ]; then\n#build_number+=\"-$simple_branch_name\"\n#fi\n\n#plist=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n#dsym_plist=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n#/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$plist\"\n#if [ -f \"$DSYM_INFO_PLIST\" ] ; then\n#/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$dsym_plist\"\n#fi\n";
 		};
-		65ED407D235DEF6C0081F399 /* Run Script: Verify No Build Settings */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script: Verify No Build Settings";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "xcrun -sdk macosx swiftc -target x86_64-macosx10.11  buildscripts/VerifyNoBuildSettings.swift -o $CONFIGURATION_TEMP_DIR/VerifyNoBS\n$CONFIGURATION_TEMP_DIR/VerifyNoBS ${PROJECT_NAME}.xcodeproj/project.pbxproj\n\nif [ $? -ne 0 ]\nthen\n   echo \"error: Build Setting were found in the project.pbxproj file.  Most likely you didn't intend to change this file and should revert it.\"\n   exit 1\nfi\n";
-		};
 		7180F95C265B67B800189094 /* Run Script: Delete Unnecessary Frameworks For Share Extension */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3555,24 +3514,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# See https://blog.curtisherbert.com/automated-build-numbers/\n\n# WARNING: If automated build numbers are restored then take \n# care to ensure any app extensions are versioned the same as the app.\n# ask Daniel (jalkut@red-sweater.com) if in doubt about this. \n#git=`sh /etc/profile; which git`\n#branch_name=`$git symbolic-ref HEAD | sed -e 's,.*/\\\\(.*\\\\),\\\\1,'`\n#git_count=`$git rev-list $branch_name |wc -l | sed 's/^ *//;s/ *$//'`\n#simple_branch_name=`$git rev-parse --abbrev-ref HEAD`\n\n#build_number=\"$git_count\"\n#if [ $CONFIGURATION != \"Release\" ]; then\n#build_number+=\"-$simple_branch_name\"\n#fi\n\n#plist=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n#dsym_plist=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n#/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$plist\"\n#if [ -f \"$DSYM_INFO_PLIST\" ] ; then\n#/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$dsym_plist\"\n#fi\n";
-		};
-		D519E77022EE5B4100923F27 /* Run Script: Verify No Build Settings */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script: Verify No Build Settings";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "xcrun -sdk macosx swift buildscripts/VerifyNoBS.swift  --xcode  ${PROJECT_DIR}/${PROJECT_NAME}.xcodeproj/project.pbxproj\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -4400,6 +4341,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1768140A2564BB8300D98635 /* NetNewsWire_iOSwidgetextension_target.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 79DFX3SWE8;
 			};
 			name = Debug;
 		};
@@ -4407,6 +4349,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1768140A2564BB8300D98635 /* NetNewsWire_iOSwidgetextension_target.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 79DFX3SWE8;
 			};
 			name = Release;
 		};
@@ -4428,6 +4371,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51314617235A797400387FDC /* NetNewsWire_iOSintentextension_target.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 79DFX3SWE8;
 			};
 			name = Debug;
 		};
@@ -4435,6 +4379,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51314617235A797400387FDC /* NetNewsWire_iOSintentextension_target.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 79DFX3SWE8;
 			};
 			name = Release;
 		};
@@ -4442,6 +4387,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 515D4FCE2325B3D000EE1167 /* NetNewsWire_iOSshareextension_target.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 79DFX3SWE8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kkitcreations.NetNewsWire.iOS.Share-Extension";
 			};
 			name = Debug;
 		};
@@ -4449,6 +4396,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 515D4FCE2325B3D000EE1167 /* NetNewsWire_iOSshareextension_target.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 79DFX3SWE8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kkitcreations.NetNewsWire.iOS.Share-Extension";
 			};
 			name = Release;
 		};
@@ -4526,6 +4475,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51121AA12265430A00BC0EC1 /* NetNewsWire_iOSapp_target.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79DFX3SWE8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkitcreations.NetNewsWire.iOS;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -4533,6 +4487,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51121AA12265430A00BC0EC1 /* NetNewsWire_iOSapp_target.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79DFX3SWE8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkitcreations.NetNewsWire.iOS;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

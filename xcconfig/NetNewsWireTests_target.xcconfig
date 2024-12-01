@@ -1,5 +1,5 @@
 CODE_SIGN_IDENTITY = Developer ID Application
-DEVELOPMENT_TEAM = M8L2WTLA8W
+DEVELOPMENT_TEAM = 79DFX3SWE8
 CODE_SIGN_STYLE = Manual
 
 // See the notes in NetNewsWire_target.xcconfig on why the
@@ -12,6 +12,6 @@ BUNDLE_LOADER = $(TEST_HOST)
 COMBINE_HIDPI_IMAGES = YES
 INFOPLIST_FILE = Tests/NetNewsWireTests/Info.plist
 LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks @loader_path/../Frameworks
-PRODUCT_BUNDLE_IDENTIFIER = com.ranchero.NetNewsWireTests
+PRODUCT_BUNDLE_IDENTIFIER = com.kkitcreations.NetNewsWireTests
 PRODUCT_NAME = NetNewsWireTests
 TEST_HOST = $(BUILT_PRODUCTS_DIR)/NetNewsWire.app/Contents/MacOS/NetNewsWire
