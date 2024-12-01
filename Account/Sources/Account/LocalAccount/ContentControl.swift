@@ -37,7 +37,7 @@ struct ContentControl {
 		}
 	}
 	
-	private static let notLookingFor = ["bezos", "elon", "musk", "election", "inauguration", "trump", "rogan", "democrat", "republican", "R.F.K.", "RFK", "Fox News", "Sonos", "bodies found", "homicide", "shot", "found dead", "turbulence", "plane crash", "save up to", "murder", "body was found", "dead in", "deadly crash"]
+	private static let notLookingFor = ["bezos", "elon", "musk", "election", "inauguration", "trump", "rogan", "democrat", "republican", "R.F.K.", "RFK", "Fox News", "Sonos", "bodies found", "homicide", "shot", "found dead", "turbulence", "plane crash", "save up to", "murder", "body was found", "dead in", "deadly crash", "CHP", "cybertruck"]
 	// other ideas: senator, politics, sponsor, conspiracy
 	
 	static func IncludeThisItem(item: ParsedItem) -> Bool {
