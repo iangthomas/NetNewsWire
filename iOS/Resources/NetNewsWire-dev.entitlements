@@ -18,7 +18,7 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)$(ORGANIZATION_IDENTIFIER).NetNewsWire.iOS</string>
+		<string>$(AppIdentifierPrefix)com.kkitcreations.NetNewsWire.iOS</string>
 	</array>
 </dict>
 </plist>

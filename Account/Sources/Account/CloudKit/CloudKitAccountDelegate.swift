@@ -633,7 +633,7 @@ private extension CloudKitAccountDelegate {
 					if let parsedFeed = parsedFeed {
 						
 #warning("here rerherh")
-						account.update(feed, with: ContentControl.GetNewFocusedFeed(allContentFeed: parsedFeed)) { result in
+						account.update(feed, with: FocusedContentWrapper.GetNewFocusedFeed(allContentFeed: parsedFeed)) { result in
 							switch result {
 							case .success:
 								
