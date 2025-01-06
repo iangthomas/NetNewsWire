@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AppGroup</key>
-	<string>group.$(ORGANIZATION_IDENTIFIER).NetNewsWire.iOS</string>
+	<string>group.com.kkitcreations.newswithoutpolitics.iOS</string>
 	<key>AppIdentifierPrefix</key>
 	<string>$(AppIdentifierPrefix)</string>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
@@ -113,7 +113,7 @@
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
-					<string>NetNewsWire.SceneDelegate</string>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
 					<string>Main</string>
 				</dict>
@@ -219,6 +219,6 @@
 		</dict>
 	</array>
 	<key>UserAgent</key>
-	<string>NetNewsWire (RSS Reader; https://netnewswire.com/)</string>
+	<string>NewsWithoutPolitics (RSS Reader; https://newswithoutpoliticsapp.com/)</string>
 </dict>
 </plist>

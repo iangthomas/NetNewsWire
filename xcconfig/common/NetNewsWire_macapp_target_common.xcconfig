@@ -4,6 +4,6 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
 ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
 INFOPLIST_FILE = Mac/Resources/Info.plist
-PRODUCT_NAME = NetNewsWire
+PRODUCT_NAME = Not Politics
 SWIFT_OBJC_BRIDGING_HEADER = Mac/NetNewsWire-Bridging-Header.h
 LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks
