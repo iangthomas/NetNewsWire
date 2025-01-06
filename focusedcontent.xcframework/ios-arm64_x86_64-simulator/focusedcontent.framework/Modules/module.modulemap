@@ -1,6 +1,0 @@
-framework module focusedcontent {
-  umbrella header "focusedcontent.h"
-  export *
-
-  module * { export * }
-}

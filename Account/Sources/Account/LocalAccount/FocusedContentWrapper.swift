@@ -7,7 +7,7 @@
 
 import Foundation
 import RSParser
-import focusedcontent
+//import focusedcontent
 
 struct FocusedContentWrapper {
 
@@ -34,14 +34,14 @@ struct FocusedContentWrapper {
 	private static func IncludeThisItem(item: ParsedItem) -> Bool {
 		
 		if let title = item.title {
-			if FocusedContentSelect.contentIsInFocus(in: title) {
-				return false
-			}
+//			if FocusedContentSelect.contentIsInFocus(in: title) {
+//				return false
+//			}
 		}
 		if let html = item.contentHTML {
-			if FocusedContentSelect.contentIsInFocus(in: html) {
-				return false
-			}
+//			if FocusedContentSelect.contentIsInFocus(in: html) {
+//				return false
+//			}
 		}
 		return true
 	}
