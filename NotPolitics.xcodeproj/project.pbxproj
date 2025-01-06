@@ -2944,9 +2944,9 @@
 			productReference = 65ED409D235DEF770081F399 /* Subscribe to Feed MAS.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		840D617B2029031C009BC708 /* NetNewsWire-iOS */ = {
+		840D617B2029031C009BC708 /* NotPolitics-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 840D61A32029031E009BC708 /* Build configuration list for PBXNativeTarget "NetNewsWire-iOS" */;
+			buildConfigurationList = 840D61A32029031E009BC708 /* Build configuration list for PBXNativeTarget "NotPolitics-iOS" */;
 			buildPhases = (
 				840D61782029031C009BC708 /* Sources */,
 				840D61792029031C009BC708 /* Frameworks */,
@@ -2962,7 +2962,7 @@
 				5131463D235A7BBE00387FDC /* PBXTargetDependency */,
 				176813FF2564BB2D00D98635 /* PBXTargetDependency */,
 			);
-			name = "NetNewsWire-iOS";
+			name = "NotPolitics-iOS";
 			packageProductDependencies = (
 				516B695E24D2F33B00B5702F /* Account */,
 				5138E93924D33E5600AFF0FE /* RSTree */,
@@ -3115,7 +3115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 849C645B1ED37A5D003D8FC0 /* Build configuration list for PBXProject "NetNewsWire" */;
+			buildConfigurationList = 849C645B1ED37A5D003D8FC0 /* Build configuration list for PBXProject "NotPolitics" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -3142,7 +3142,7 @@
 				849C645F1ED37A5D003D8FC0 /* NetNewsWire */,
 				65ED3FA2235DEF6C0081F399 /* NetNewsWire MAS */,
 				849C64701ED37A5D003D8FC0 /* NetNewsWireTests */,
-				840D617B2029031C009BC708 /* NetNewsWire-iOS */,
+				840D617B2029031C009BC708 /* NotPolitics-iOS */,
 				6581C73220CED60000F4AD34 /* Subscribe to Feed */,
 				65ED4090235DEF770081F399 /* Subscribe to Feed MAS */,
 				513C5CE5232571C2003D4054 /* NetNewsWire iOS Share Extension */,
@@ -4193,7 +4193,7 @@
 		};
 		518B2ED82351B3DD00400001 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 840D617B2029031C009BC708 /* NetNewsWire-iOS */;
+			target = 840D617B2029031C009BC708 /* NotPolitics-iOS */;
 			targetProxy = 518B2ED72351B3DD00400001 /* PBXContainerItemProxy */;
 		};
 		6538133D2680E28D007A082C /* PBXTargetDependency */ = {
@@ -4637,7 +4637,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		840D61A32029031E009BC708 /* Build configuration list for PBXNativeTarget "NetNewsWire-iOS" */ = {
+		840D61A32029031E009BC708 /* Build configuration list for PBXNativeTarget "NotPolitics-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				840D61A42029031E009BC708 /* Debug */,
@@ -4646,7 +4646,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		849C645B1ED37A5D003D8FC0 /* Build configuration list for PBXProject "NetNewsWire" */ = {
+		849C645B1ED37A5D003D8FC0 /* Build configuration list for PBXProject "NotPolitics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				849C64781ED37A5D003D8FC0 /* Debug */,

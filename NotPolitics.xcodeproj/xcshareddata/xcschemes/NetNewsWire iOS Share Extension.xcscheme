@@ -18,7 +18,7 @@
                BlueprintIdentifier = "513C5CE5232571C2003D4054"
                BuildableName = "NetNewsWire iOS Share Extension.appex"
                BlueprintName = "NetNewsWire iOS Share Extension"
-               ReferencedContainer = "container:NetNewsWire.xcodeproj">
+               ReferencedContainer = "container:NotPolitics.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,9 +30,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "840D617B2029031C009BC708"
-               BuildableName = "NetNewsWire.app"
-               BlueprintName = "NetNewsWire-iOS"
-               ReferencedContainer = "container:NetNewsWire.xcodeproj">
+               BuildableName = "Not Politics.app"
+               BlueprintName = "NotPolitics-iOS"
+               ReferencedContainer = "container:NotPolitics.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,7 +50,7 @@
                BlueprintIdentifier = "518B2ED12351B3DD00400001"
                BuildableName = "NetNewsWire-iOSTests.xctest"
                BlueprintName = "NetNewsWire-iOSTests"
-               ReferencedContainer = "container:NetNewsWire.xcodeproj">
+               ReferencedContainer = "container:NotPolitics.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "840D617B2029031C009BC708"
-            BuildableName = "NetNewsWire.app"
-            BlueprintName = "NetNewsWire-iOS"
-            ReferencedContainer = "container:NetNewsWire.xcodeproj">
+            BuildableName = "Not Politics.app"
+            BlueprintName = "NotPolitics-iOS"
+            ReferencedContainer = "container:NotPolitics.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -84,15 +84,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
+      askForAppToLaunch = "Yes"
       launchAutomaticallySubstyle = "2">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "840D617B2029031C009BC708"
-            BuildableName = "NetNewsWire.app"
-            BlueprintName = "NetNewsWire-iOS"
-            ReferencedContainer = "container:NetNewsWire.xcodeproj">
+            BuildableName = "Not Politics.app"
+            BlueprintName = "NotPolitics-iOS"
+            ReferencedContainer = "container:NotPolitics.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
