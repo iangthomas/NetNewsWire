@@ -3139,10 +3139,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				840D617B2029031C009BC708 /* NotPolitics-iOS */,
 				849C645F1ED37A5D003D8FC0 /* NetNewsWire */,
 				65ED3FA2235DEF6C0081F399 /* NetNewsWire MAS */,
 				849C64701ED37A5D003D8FC0 /* NetNewsWireTests */,
-				840D617B2029031C009BC708 /* NotPolitics-iOS */,
 				6581C73220CED60000F4AD34 /* Subscribe to Feed */,
 				65ED4090235DEF770081F399 /* Subscribe to Feed MAS */,
 				513C5CE5232571C2003D4054 /* NetNewsWire iOS Share Extension */,
